@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<!-- Kevin Ramos -->
+<html>
+	<head>
+		<title>
+			Hot and Cold
+		</title>
+		
+		<script>
+		var GOAL = parseInt (Math.random() * 101);
+		count = 6;
+		
+		function userGuess()
+		{
+			x = prompt ("enter a number between 1 and 100");
+			
+			myElement = document.getElementById("myDiv");
+			myElement.innerHTML = x;
+			
+				if ( x == GOAL ) 
+				{
+					degree = "YOU GUESSED IT RIGHT :D";
+					count = 1;
+					userButton = "RESET THE GAME";
+					myElement = document.getElementById("myButton");
+					myElement.innerHTML = userButton;
+				}
+				else
+				{	if ( x==GOAL-5 || x==GOAL-4 || x==GOAL-3 || x==GOAL-2 || x==GOAL-1 || x==GOAL+5 || x==GOAL+4 || x==GOAL+3 || x==GOAL+2 || x==GOAL+1 )
+					{
+						degree = "VERY HOT";
+					}
+					else
+					{	if ( x==GOAL-8 || x==GOAL-7 || x==GOAL-6 || x==GOAL+8 || x==GOAL+7 || x==GOAL+6 )
+						{
+							degree = "HOT";
+						}
+						else
+						{	if ( x==GOAL-15 || x==GOAL-14 || x==GOAL-13 || x==GOAL-12 || x==GOAL-11 || x==GOAL-10 || x==GOAL-9 || x==GOAL-8 || x==GOAL+15 || x==GOAL+14 || x==GOAL+13 || x==GOAL+12 || x==GOAL+10  || x==GOAL+9 || x==GOAL+8 )
+							{
+								degree = "VERY WARM";
+							}
+							else
+							{	if ( x==GOAL-20 || x==GOAL-19 || x==GOAL-18 || x==GOAL-17 || x==GOAL-16 || x==GOAL+20 || x==GOAL+19 || x==GOAL+18 || x==GOAL+17 || x==GOAL+16 )
+								{
+									degree = "WARM";
+								}
+								else
+								{	if ( x==GOAL-30 || x==GOAL-29 || x==GOAL-28 || x==GOAL-27 || x==GOAL-26 || x==GOAL-25 || x==GOAL-24 || x==GOAL-23 || x==GOAL-22 || x==GOAL-21 || x==GOAL+30 || x==GOAL+29 || x==GOAL+28 || x==GOAL+27 || x==GOAL+26 || x==GOAL+25  || x==GOAL+24 || x==GOAL+23 || x==GOAL+22  || x==GOAL+21 )
+									{
+										degree = "COOL";
+									}
+									else
+									{	if ( x==GOAL-40 || x==GOAL-39 || x==GOAL-38 || x==GOAL-37 || x==GOAL-36 || x==GOAL-35 || x==GOAL-34 || x==GOAL-33 || x==GOAL-32 || x==GOAL-31 || x==GOAL+40 || x==GOAL+39 || x==GOAL+38 || x==GOAL+37 || x==GOAL+36 || x==GOAL+35  || x==GOAL+34 || x==GOAL+33 || x==GOAL+32  || x==GOAL+31 )
+										{
+											degree = "VERY COOL";
+										}
+										else
+										{	if ( x==GOAL-55|| x==GOAL-54 || x==GOAL-53 || x==GOAL-52 || x==GOAL-51 || x==GOAL-50 || x==GOAL-49 || x==GOAL-48 || x==GOAL-47 || x==GOAL-46 || x==GOAL-45 || x==GOAL-44 || x==GOAL-43 || x==GOAL-42 || x==GOAL-41 || x==GOAL+55  || x==GOAL+54 || x==GOAL+53 || x==GOAL+52  || x==GOAL+51 || x==GOAL+50 || x==GOAL+49 || x==GOAL+48 || x==GOAL+47 || x==GOAL+46 || x==GOAL+45  || x==GOAL+44 || x==GOAL+43 || x==GOAL+42  || x==GOAL+41 )
+											{
+												degree = "COLD";
+											}
+											else
+											{	
+												degree = "VERY COLD";
+											}		
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			myElement = document.getElementById("mySpan");
+			myElement.innerHTML = degree;
+		}			
+		
+		function userGuess1()
+		{
+			x = prompt ("enter a number between 1 and 100");
+			
+			myElement = document.getElementById("myDiv1");
+			myElement.innerHTML = x;
+			
+				if ( x == GOAL ) 
+				{
+					degree = "YOU GUESSED IT RIGHT :D";
+					count = 1;
+					userButton = "RESET THE GAME";
+					myElement = document.getElementById("myButton");
+					myElement.innerHTML = userButton;
+				}
+				else
+				{	if ( x==GOAL-5 || x==GOAL-4 || x==GOAL-3 || x==GOAL-2 || x==GOAL-1 || x==GOAL+5 || x==GOAL+4 || x==GOAL+3 || x==GOAL+2 || x==GOAL+1 )
+					{
+						degree = "VERY HOT";
+					}
+					else
+					{	if ( x==GOAL-8 || x==GOAL-7 || x==GOAL-6 || x==GOAL+8 || x==GOAL+7 || x==GOAL+6 )
+						{
+							degree = "HOT";
+						}
+						else
+						{	if ( x==GOAL-15 || x==GOAL-14 || x==GOAL-13 || x==GOAL-12 || x==GOAL-11 || x==GOAL-10 || x==GOAL-9 || x==GOAL-8 || x==GOAL+15 || x==GOAL+14 || x==GOAL+13 || x==GOAL+12 || x==GOAL+10  || x==GOAL+9 || x==GOAL+8 )
+							{
+								degree = "VERY WARM";
+							}
+							else
+							{	if ( x==GOAL-20 || x==GOAL-19 || x==GOAL-18 || x==GOAL-17 || x==GOAL-16 || x==GOAL+20 || x==GOAL+19 || x==GOAL+18 || x==GOAL+17 || x==GOAL+16 )
+								{
+									degree = "WARM";
+								}
+								else
+								{	if ( x==GOAL-30 || x==GOAL-29 || x==GOAL-28 || x==GOAL-27 || x==GOAL-26 || x==GOAL-25 || x==GOAL-24 || x==GOAL-23 || x==GOAL-22 || x==GOAL-21 || x==GOAL+30 || x==GOAL+29 || x==GOAL+28 || x==GOAL+27 || x==GOAL+26 || x==GOAL+25  || x==GOAL+24 || x==GOAL+23 || x==GOAL+22  || x==GOAL+21 )
+									{
+										degree = "COOL";
+									}
+									else
+									{	if ( x==GOAL-40 || x==GOAL-39 || x==GOAL-38 || x==GOAL-37 || x==GOAL-36 || x==GOAL-35 || x==GOAL-34 || x==GOAL-33 || x==GOAL-32 || x==GOAL-31 || x==GOAL+40 || x==GOAL+39 || x==GOAL+38 || x==GOAL+37 || x==GOAL+36 || x==GOAL+35  || x==GOAL+34 || x==GOAL+33 || x==GOAL+32  || x==GOAL+31 )
+										{
+											degree = "VERY COOL";
+										}
+										else
+										{	if ( x==GOAL-55|| x==GOAL-54 || x==GOAL-53 || x==GOAL-52 || x==GOAL-51 || x==GOAL-50 || x==GOAL-49 || x==GOAL-48 || x==GOAL-47 || x==GOAL-46 || x==GOAL-45 || x==GOAL-44 || x==GOAL-43 || x==GOAL-42 || x==GOAL-41 || x==GOAL+55  || x==GOAL+54 || x==GOAL+53 || x==GOAL+52  || x==GOAL+51 || x==GOAL+50 || x==GOAL+49 || x==GOAL+48 || x==GOAL+47 || x==GOAL+46 || x==GOAL+45  || x==GOAL+44 || x==GOAL+43 || x==GOAL+42  || x==GOAL+41 )
+											{
+												degree = "COLD";
+											}
+											else
+											{	
+												degree = "VERY COLD";
+											}		
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			myElement = document.getElementById("mySpan1");
+			myElement.innerHTML = degree;
+		}	
+
+		function userGuess2()
+		{
+			x = prompt ("enter a number between 1 and 100");
+			
+			myElement = document.getElementById("myDiv2");
+			myElement.innerHTML = x;
+			
+				if ( x == GOAL ) 
+				{
+					degree = "YOU GUESSED IT RIGHT :D";
+					count = 1;
+					userButton = "RESET THE GAME";
+					myElement = document.getElementById("myButton");
+					myElement.innerHTML = userButton;
+				}
+				else
+				{	if ( x==GOAL-5 || x==GOAL-4 || x==GOAL-3 || x==GOAL-2 || x==GOAL-1 || x==GOAL+5 || x==GOAL+4 || x==GOAL+3 || x==GOAL+2 || x==GOAL+1 )
+					{
+						degree = "VERY HOT";
+					}
+					else
+					{	if ( x==GOAL-8 || x==GOAL-7 || x==GOAL-6 || x==GOAL+8 || x==GOAL+7 || x==GOAL+6 )
+						{
+							degree = "HOT";
+						}
+						else
+						{	if ( x==GOAL-15 || x==GOAL-14 || x==GOAL-13 || x==GOAL-12 || x==GOAL-11 || x==GOAL-10 || x==GOAL-9 || x==GOAL-8 || x==GOAL+15 || x==GOAL+14 || x==GOAL+13 || x==GOAL+12 || x==GOAL+10  || x==GOAL+9 || x==GOAL+8 )
+							{
+								degree = "VERY WARM";
+							}
+							else
+							{	if ( x==GOAL-20 || x==GOAL-19 || x==GOAL-18 || x==GOAL-17 || x==GOAL-16 || x==GOAL+20 || x==GOAL+19 || x==GOAL+18 || x==GOAL+17 || x==GOAL+16 )
+								{
+									degree = "WARM";
+								}
+								else
+								{	if ( x==GOAL-30 || x==GOAL-29 || x==GOAL-28 || x==GOAL-27 || x==GOAL-26 || x==GOAL-25 || x==GOAL-24 || x==GOAL-23 || x==GOAL-22 || x==GOAL-21 || x==GOAL+30 || x==GOAL+29 || x==GOAL+28 || x==GOAL+27 || x==GOAL+26 || x==GOAL+25  || x==GOAL+24 || x==GOAL+23 || x==GOAL+22  || x==GOAL+21 )
+									{
+										degree = "COOL";
+									}
+									else
+									{	if ( x==GOAL-40 || x==GOAL-39 || x==GOAL-38 || x==GOAL-37 || x==GOAL-36 || x==GOAL-35 || x==GOAL-34 || x==GOAL-33 || x==GOAL-32 || x==GOAL-31 || x==GOAL+40 || x==GOAL+39 || x==GOAL+38 || x==GOAL+37 || x==GOAL+36 || x==GOAL+35  || x==GOAL+34 || x==GOAL+33 || x==GOAL+32  || x==GOAL+31 )
+										{
+											degree = "VERY COOL";
+										}
+										else
+										{	if ( x==GOAL-55|| x==GOAL-54 || x==GOAL-53 || x==GOAL-52 || x==GOAL-51 || x==GOAL-50 || x==GOAL-49 || x==GOAL-48 || x==GOAL-47 || x==GOAL-46 || x==GOAL-45 || x==GOAL-44 || x==GOAL-43 || x==GOAL-42 || x==GOAL-41 || x==GOAL+55  || x==GOAL+54 || x==GOAL+53 || x==GOAL+52  || x==GOAL+51 || x==GOAL+50 || x==GOAL+49 || x==GOAL+48 || x==GOAL+47 || x==GOAL+46 || x==GOAL+45  || x==GOAL+44 || x==GOAL+43 || x==GOAL+42  || x==GOAL+41 )
+											{
+												degree = "COLD";
+											}
+											else
+											{	
+												degree = "VERY COLD";
+											}		
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			myElement = document.getElementById("mySpan2");
+			myElement.innerHTML = degree;
+		}	
+		
+		function userGuess3()
+		{
+			x = prompt ("enter a number between 1 and 100");
+			
+			myElement = document.getElementById("myDiv3");
+			myElement.innerHTML = x;
+			
+				if ( x == GOAL ) 
+				{
+					degree = "YOU GUESSED IT RIGHT :D";
+					count = 1;
+					userButton = "RESET THE GAME";
+					myElement = document.getElementById("myButton");
+					myElement.innerHTML = userButton;
+				}
+				else
+				{	if ( x==GOAL-5 || x==GOAL-4 || x==GOAL-3 || x==GOAL-2 || x==GOAL-1 || x==GOAL+5 || x==GOAL+4 || x==GOAL+3 || x==GOAL+2 || x==GOAL+1 )
+					{
+						degree = "VERY HOT";
+					}
+					else
+					{	if ( x==GOAL-8 || x==GOAL-7 || x==GOAL-6 || x==GOAL+8 || x==GOAL+7 || x==GOAL+6 )
+						{
+							degree = "HOT";
+						}
+						else
+						{	if ( x==GOAL-15 || x==GOAL-14 || x==GOAL-13 || x==GOAL-12 || x==GOAL-11 || x==GOAL-10 || x==GOAL-9 || x==GOAL-8 || x==GOAL+15 || x==GOAL+14 || x==GOAL+13 || x==GOAL+12 || x==GOAL+10  || x==GOAL+9 || x==GOAL+8 )
+							{
+								degree = "VERY WARM";
+							}
+							else
+							{	if ( x==GOAL-20 || x==GOAL-19 || x==GOAL-18 || x==GOAL-17 || x==GOAL-16 || x==GOAL+20 || x==GOAL+19 || x==GOAL+18 || x==GOAL+17 || x==GOAL+16 )
+								{
+									degree = "WARM";
+								}
+								else
+								{	if ( x==GOAL-30 || x==GOAL-29 || x==GOAL-28 || x==GOAL-27 || x==GOAL-26 || x==GOAL-25 || x==GOAL-24 || x==GOAL-23 || x==GOAL-22 || x==GOAL-21 || x==GOAL+30 || x==GOAL+29 || x==GOAL+28 || x==GOAL+27 || x==GOAL+26 || x==GOAL+25  || x==GOAL+24 || x==GOAL+23 || x==GOAL+22  || x==GOAL+21 )
+									{
+										degree = "COOL";
+									}
+									else
+									{	if ( x==GOAL-40 || x==GOAL-39 || x==GOAL-38 || x==GOAL-37 || x==GOAL-36 || x==GOAL-35 || x==GOAL-34 || x==GOAL-33 || x==GOAL-32 || x==GOAL-31 || x==GOAL+40 || x==GOAL+39 || x==GOAL+38 || x==GOAL+37 || x==GOAL+36 || x==GOAL+35  || x==GOAL+34 || x==GOAL+33 || x==GOAL+32  || x==GOAL+31 )
+										{
+											degree = "VERY COOL";
+										}
+										else
+										{	if ( x==GOAL-55|| x==GOAL-54 || x==GOAL-53 || x==GOAL-52 || x==GOAL-51 || x==GOAL-50 || x==GOAL-49 || x==GOAL-48 || x==GOAL-47 || x==GOAL-46 || x==GOAL-45 || x==GOAL-44 || x==GOAL-43 || x==GOAL-42 || x==GOAL-41 || x==GOAL+55  || x==GOAL+54 || x==GOAL+53 || x==GOAL+52  || x==GOAL+51 || x==GOAL+50 || x==GOAL+49 || x==GOAL+48 || x==GOAL+47 || x==GOAL+46 || x==GOAL+45  || x==GOAL+44 || x==GOAL+43 || x==GOAL+42  || x==GOAL+41 )
+											{
+												degree = "COLD";
+											}
+											else
+											{	
+												degree = "VERY COLD";
+											}		
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			myElement = document.getElementById("mySpan3");
+			myElement.innerHTML = degree;
+		}	
+		
+		function userGuess4()
+		{
+			x = prompt ("enter a number between 1 and 100");
+			
+			myElement = document.getElementById("myDiv4");
+			myElement.innerHTML = x;
+			
+				if ( x == GOAL ) 
+				{
+					degree = "YOU GUESSED IT RIGHT :D";
+					count = 1;
+					userButton = "RESET THE GAME";
+					myElement = document.getElementById("myButton");
+					myElement.innerHTML = userButton;
+				}
+				else
+				{	if ( x==GOAL-5 || x==GOAL-4 || x==GOAL-3 || x==GOAL-2 || x==GOAL-1 || x==GOAL+5 || x==GOAL+4 || x==GOAL+3 || x==GOAL+2 || x==GOAL+1 )
+					{
+						degree = "VERY HOT";
+					}
+					else
+					{	if ( x==GOAL-8 || x==GOAL-7 || x==GOAL-6 || x==GOAL+8 || x==GOAL+7 || x==GOAL+6 )
+						{
+							degree = "HOT";
+						}
+						else
+						{	if ( x==GOAL-15 || x==GOAL-14 || x==GOAL-13 || x==GOAL-12 || x==GOAL-11 || x==GOAL-10 || x==GOAL-9 || x==GOAL-8 || x==GOAL+15 || x==GOAL+14 || x==GOAL+13 || x==GOAL+12 || x==GOAL+10  || x==GOAL+9 || x==GOAL+8 )
+							{
+								degree = "VERY WARM";
+							}
+							else
+							{	if ( x==GOAL-20 || x==GOAL-19 || x==GOAL-18 || x==GOAL-17 || x==GOAL-16 || x==GOAL+20 || x==GOAL+19 || x==GOAL+18 || x==GOAL+17 || x==GOAL+16 )
+								{
+									degree = "WARM";
+								}
+								else
+								{	if ( x==GOAL-30 || x==GOAL-29 || x==GOAL-28 || x==GOAL-27 || x==GOAL-26 || x==GOAL-25 || x==GOAL-24 || x==GOAL-23 || x==GOAL-22 || x==GOAL-21 || x==GOAL+30 || x==GOAL+29 || x==GOAL+28 || x==GOAL+27 || x==GOAL+26 || x==GOAL+25  || x==GOAL+24 || x==GOAL+23 || x==GOAL+22  || x==GOAL+21 )
+									{
+										degree = "COOL";
+									}
+									else
+									{	if ( x==GOAL-40 || x==GOAL-39 || x==GOAL-38 || x==GOAL-37 || x==GOAL-36 || x==GOAL-35 || x==GOAL-34 || x==GOAL-33 || x==GOAL-32 || x==GOAL-31 || x==GOAL+40 || x==GOAL+39 || x==GOAL+38 || x==GOAL+37 || x==GOAL+36 || x==GOAL+35  || x==GOAL+34 || x==GOAL+33 || x==GOAL+32  || x==GOAL+31 )
+										{
+											degree = "VERY COOL";
+										}
+										else
+										{	if ( x==GOAL-55|| x==GOAL-54 || x==GOAL-53 || x==GOAL-52 || x==GOAL-51 || x==GOAL-50 || x==GOAL-49 || x==GOAL-48 || x==GOAL-47 || x==GOAL-46 || x==GOAL-45 || x==GOAL-44 || x==GOAL-43 || x==GOAL-42 || x==GOAL-41 || x==GOAL+55  || x==GOAL+54 || x==GOAL+53 || x==GOAL+52  || x==GOAL+51 || x==GOAL+50 || x==GOAL+49 || x==GOAL+48 || x==GOAL+47 || x==GOAL+46 || x==GOAL+45  || x==GOAL+44 || x==GOAL+43 || x==GOAL+42  || x==GOAL+41 )
+											{
+												degree = "COLD";
+											}
+											else
+											{	
+												degree = "VERY COLD";
+											}		
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+			myElement = document.getElementById("mySpan4");
+			myElement.innerHTML = degree;
+		}	
+		
+		function userGuesses()
+		{
+			count = count -1;
+			
+			if (count == 5)
+			{
+				userGuess();
+			}
+			else
+			{
+				if (count == 4)
+				{
+					userGuess1();
+				}
+				else
+				{
+					if (count == 3)
+					{
+						userGuess2();
+					}
+					else
+					{
+						if (count == 2)
+						{
+							userGuess3();
+						}
+						else
+						{
+							if (count == 1)
+							{
+								userGuess4();
+								
+								userButton = "RESET THE GAME";
+								myElement = document.getElementById("myButton");
+								myElement.innerHTML = userButton;
+								
+								myElement = document.getElementById("myDiv5");
+								myElement.innerHTML = GOAL;
+							}
+							else
+							{
+								if (count == 0)
+								{
+									location.reload();
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		
+		function button()
+		{
+			userButton = "Take A Guess";
+			myElement = document.getElementById("myButton");
+			myElement.innerHTML = userButton;
+		}
+		</script>
+		
+		<style>
+		body 
+		{
+			text-align:center;
+			background-color:#DDECEF;
+			color:grey;
+		}
+		
+		button
+		{
+			background:#CCCCCC;
+			border-color:#BC4676;
+			border-radius:10px;
+			padding:6px 12px;
+			font-weight:bold;
+			color:#BC4676;
+		}
+		
+		div, span
+		{
+			font-family:arial;
+			font-weight:bold;
+			color:#BC4676;
+		}
+		</style>
+	</head> 
+	
+	<body>
+		<h1>Welcome to the Guessing Game</h1>
+		
+		<h2>Instructions</h2>
+		
+		<h3>In this game you will get 5 tries to guess the number between 1 and 100
+		that has been randomly generated as you are reading this. Everytime you take a guess, you
+		will be given a degree of hot or cold. This will determine how far away you are
+		from the number. If you guess right with 5 tries you 
+		will win :D If not you lose >:P Good Luck.</h3>
+		
+		
+		<button id = "myButton" onclick = "userGuesses();"></button>
+		</br>
+		<h3>Guess # 1</h3>
+		<div id = "myDiv" ></div> <span id = "mySpan" ></span>
+		</br>
+		<h3>Guess # 2</h3>
+		<div id = "myDiv1" ></div> <span id = "mySpan1" ></span>
+		</br>
+		<h3>Guess # 3</h3>
+		<div id = "myDiv2" ></div> <span id = "mySpan2" ></span>
+		</br>
+		<h3>Guess # 4</h3>
+		<div id = "myDiv3" ></div> <span id = "mySpan3" ></span>
+		</br>
+		<h3>Guess #5</h3>
+		<div id = "myDiv4" ></div> <span id = "mySpan4" ></span>
+		</br>
+		<h3>Correct Answer</h3>
+		<div id = "myDiv5" ></div>
+		</br>
+		
+	<script>
+	button();
+	</script>
+	</body>
+</html>
