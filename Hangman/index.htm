@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+
+	HANGMAN
+	
+-->
+<html>
+	<head>
+		<title>Hangman</title>
+        
+        <style>
+			body {text-align:center; background-color:rgb(186, 200, 237);}
+			div {font:36pt calibri normal;}
+			
+			h1 {font:72pt calibri bold; margin-top:0px; color:#0099CC;}
+		
+			button {width:35px; padding:5px; border:thick outset grey; background-color:#0099CC; text-align:center; vertical-align:middle; cursor:default; font:14pt calibri normal}
+						
+			span.halfcol {display:inline-block; width:40%; padding:0px 15px; vertical-align:middle;}
+		</style>
+		
+        <script type = "text/javascript">
+		puzzle1 = "Thirteen reasons why";
+		puzzle2 = "Slump God";
+		puzzle3 = "Vianney sucks";
+		puzzle4 = "Vianney is good";		
+		
+		puzzle ="";
+		playerStatus = 1;
+		
+		playerString = "";
+		
+		currentButtonId ="";
+		
+		HANGED = 7;
+		PLAYING = 0;
+		WON = 1;
+		LOST = 2;
+		gameState = PLAYING;
+		
+		function selectPuzzle()
+		{
+			selPuzzle = parseInt(Math.random() * 4) + 1;
+			if (selPuzzle == 1)
+			{
+				puzzle = puzzle1;
+			}
+			if (selPuzzle == 2) 
+			{
+				puzzle = puzzle2;
+			}
+			if (selPuzzle == 3)
+			{
+				puzzle = puzzle3;
+			}
+			if (selPuzzle == 4)
+			{
+				puzzle = puzzle4;
+			}
+		}
+		
+		function buildPlayerString()
+		{
+			for (i = 0; i < puzzle.length; i++)
+			{
+				if ( puzzle.charAt(i) == " " )
+				{
+					playerString += " ";
+				}
+				else
+				{
+					playerString += "-";
+				}
+			}
+		}
+		
+		function display()
+		{
+			playerOutput.innerHTML = playerString;
+			gallows.src = "images/gallows" + playerStatus + ".png";
+		}
+		
+		function makeGuess(currentButtonId,selLetter)
+		{
+			btn = document.getElementById(currentButtonId);
+			btn.disabled = true;
+			
+			if (puzzle.toUpperCase().indexOf(selLetter) >= 0)
+			{
+				fillPlayerString(selLetter);
+			}
+			else 
+			{
+				playerStatus++;
+			}
+			checkGameState();
+			display();		
+		}
+		
+		function fillPlayerString(selLetter)
+		{
+			tmp = "";
+			for(i = 0; i < puzzle.length; i++)
+			{
+				if (puzzle.toUpperCase().charAt(i) == selLetter)
+				{
+					tmp += puzzle.charAt(i);
+				}
+				else
+				{
+					tmp += playerString.charAt(i);
+				}
+			}
+			playerString = tmp;
+		}
+		
+		function checkGameState()
+		{
+			if (playerStatus == HANGED)
+			{
+				gameState = LOST;
+			}
+			if (playerString == puzzle)
+			{
+				gameState = WON;
+			}
+		}
+		
+		function resetGame()
+		{
+			gameState = PLAYING;
+			playerStatus = 1;
+			letterButtons.style.display = "block";
+			playerString ="";
+			
+			btnList =
+			letterButtons.getElementsByTagName("button")
+			for (var i = 0; i <btnList.length; i++)
+				{
+					btnList[i];
+				}
+		}
+        </script>
+        
+	</head>
+		
+	<body>
+		<h1>Hangman</h1>
+		
+		<span class = "halfcol">
+			<button style = "width:75px;" onclick = "resetGame();">Reset Game</button>
+			<div id = "div_letterbuttons">
+				<button id ="lba" onclick = "makeGuess('lba','A');">A</button>
+				<button id ="lbb" onclick = "makeGuess('lbb','B');">B</button>
+				<button id ="lbc" onclick = "makeGuess('lbc','C');">C</button>
+				<button id ="lbd" onclick = "makeGuess('lbd','D');">D</button>
+				<button id ="lbe" onclick = "makeGuess('lbe','E');">E</button>
+				<button id ="lbf" onclick = "makeGuess('lbf','F');">F</button>
+				<button id ="lbg" onclick = "makeGuess('lbg','G');">G</button>
+				<button id ="lbh" onclick = "makeGuess('lbh','H');">H</button>
+				<button id ="lbi" onclick = "makeGuess('lbi','I');">I</button>
+				<button id ="lbj" onclick = "makeGuess('lbj','J');">J</button>
+				<button id ="lbk" onclick = "makeGuess('lbk','K');">K</button>
+				<button id ="lbl" onclick = "makeGuess('lbl','L');">L</button>
+				<button id ="lbm" onclick = "makeGuess('lbm','M');">M</button>
+				<button id ="lbn" onclick = "makeGuess('lbn','N');">N</button>
+				<button id ="lbo" onclick = "makeGuess('lbo','O');">O</button>
+				<button id ="lbp" onclick = "makeGuess('lbp','P');">P</button>
+				<button id ="lbq" onclick = "makeGuess('lbq','Q');">Q</button>
+				<button id ="lbr" onclick = "makeGuess('lbr','R');">R</button>
+				<button id ="lbs" onclick = "makeGuess('lbs','S');">S</button>
+				<button id ="lbt" onclick = "makeGuess('lbt','T');">T</button>
+				<button id ="lbu" onclick = "makeGuess('lbu','U');">U</button>
+				<button id ="lbv" onclick = "makeGuess('lbv','V');">V</button>
+				<button id ="lbw" onclick = "makeGuess('lbw','W');">W</button>
+				<button id ="lbx" onclick = "makeGuess('lbx','X');">X</button>
+				<button id ="lby" onclick = "makeGuess('lby','Y');">Y</button>
+				<button id ="lbz" onclick = "makeGuess('lbz','Z');">Z</button>
+			</div>
+		</span>
+                
+  		<span class = "halfcol">
+			<img id = "img_gallows" src = "images/gallows1.png" /><br /><br />
+			
+			
+			<div id = "div_playeroutput"></div><br />
+		</span>
+        
+      <script type = "text/javascript">
+			gallows = document.getElementById("img_gallows");
+			playerOutput = document.getElementById("div_playeroutput");
+			letterButtons = document.getElementById("div_letterbuttons");
+			
+			selectPuzzle();
+			buildPlayerString();
+			display();
+		</script>
+	</body>
+</html>
