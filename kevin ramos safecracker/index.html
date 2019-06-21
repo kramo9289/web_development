@@ -1,0 +1,1928 @@
+<!DOCTYPE HTML>
+<!-- Kevin Ramos -->
+<html>
+	<head>
+		<title>
+			Safecracker Game
+		</title>
+		
+		<script>
+		vaultNumber = 1;
+		
+		vaultCode = "";
+		userInput = "";
+		
+		vaultInput1 = 0;
+		vaultInput2 = 0;
+		vaultInput3 = 0;
+		vaultInput4 = 0;
+		vaultInput5 = 0;
+		vaultInput6 = 0;
+		vaultInput7 = 0;
+		vaultInput8 = 0;
+		vaultInput9 = 0;
+		
+		userMoney = 0;
+		
+		userAtempts = 0;
+		
+		chosenStoreItem =0;
+		userHenchmen = false;
+		
+		function inputToZero()
+		{
+			vaultInput1 = 0;
+			vaultInput2 = 0;
+			vaultInput3 = 0;
+			vaultInput4 = 0;
+			vaultInput5 = 0;
+			vaultInput6 = 0;
+			vaultInput7 = 0;
+			vaultInput8 = 0;
+			vaultInput9 = 0;
+			
+			userAtempts =0;
+			totalAttempts = 0;
+		
+			document.getElementById("dig1").innerHTML = "-";
+			document.getElementById("dig2").innerHTML = "-";
+			document.getElementById("dig3").innerHTML = "-";
+			document.getElementById("dig4").innerHTML = "-";
+			document.getElementById("dig5").innerHTML = "-";
+			document.getElementById("dig6").innerHTML = "-";
+			document.getElementById("dig7").innerHTML = "-";
+			document.getElementById("dig8").innerHTML = "-";
+			document.getElementById("dig9").innerHTML = "-";
+		}
+		
+		function inputToZero2()
+		{
+			vaultInput1 = 0;
+			vaultInput2 = 0;
+			vaultInput3 = 0;
+			vaultInput4 = 0;
+			vaultInput5 = 0;
+			vaultInput6 = 0;
+			vaultInput7 = 0;
+			vaultInput8 = 0;
+			vaultInput9 = 0;
+			
+			document.getElementById("dig1").innerHTML = "-";
+			document.getElementById("dig2").innerHTML = "-";
+			document.getElementById("dig3").innerHTML = "-";
+			document.getElementById("dig4").innerHTML = "-";
+			document.getElementById("dig5").innerHTML = "-";
+			document.getElementById("dig6").innerHTML = "-";
+			document.getElementById("dig7").innerHTML = "-";
+			document.getElementById("dig8").innerHTML = "-";
+			document.getElementById("dig9").innerHTML = "-";
+		}
+		
+		function vaultRange()
+		{
+			
+			if (vaultNumber == 1)
+			{
+				tmp = "";
+				for(i=0; i < 3; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 3) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-3";
+			}
+				
+			if (vaultNumber == 2)
+			{
+				tmp = "";
+				for(i=0; i < 3; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 4) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-4";
+			}
+			
+			if (vaultNumber == 3)
+			{
+				tmp = "";
+				for(i=0; i < 3; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 5) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-5";
+			}
+			
+			if (vaultNumber == 5)
+			{
+				tmp = "";
+				for(i=0; i < 4; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 4) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-4";
+			}
+			
+			if (vaultNumber == 6)
+			{
+				tmp = "";
+				for(i=0; i < 4; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 5) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-5";
+			}
+			
+			if (vaultNumber == 7)
+			{
+				tmp = "";
+				for(i=0; i < 4; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 6) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-6";
+			}
+			
+			if (vaultNumber == 8)
+			{
+				tmp = "";
+				for(i=0; i < 4; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 7) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-7";
+			}
+			
+			if (vaultNumber == 9)
+			{
+				tmp = "";
+				for(i=0; i < 5; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 5) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-5";
+			}
+			
+			if (vaultNumber == 10)
+			{
+				tmp = "";
+				for(i=0; i < 5; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 6) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-6";
+			}
+			
+			if (vaultNumber == 11)
+			{
+				tmp = "";
+				for(i=0; i < 5; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 7) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-7";
+			}
+			
+			if (vaultNumber == 12)
+			{
+				tmp = "";
+				for(i=0; i < 6; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 6) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-6";
+			}
+			
+			if (vaultNumber == 13)
+			{
+				tmp = "";
+				for(i=0; i < 6; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 7) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-7";
+			}
+			
+			if (vaultNumber == 14)
+			{
+				tmp = "";
+				for(i=0; i < 6; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 8) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-8";
+			}
+			
+			if (vaultNumber == 15)
+			{
+				tmp = "";
+				for(i=0; i < 7; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 7) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				range = 7;
+				document.getElementById("rangeOfDigits").innerHTML = "1-7";
+			}
+			
+			if (vaultNumber == 16)
+			{
+				tmp = "";
+				for(i=0; i < 7; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 8) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-8";
+			}
+			
+			if (vaultNumber == 17)
+			{
+				tmp ="";
+				for(i=0; i < 7; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 9) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-9";
+			}
+			
+			if (vaultNumber == 18)
+			{
+				tmp = "";
+				for(i=0; i < 8; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 8) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				range = 8;
+				document.getElementById("rangeOfDigits").innerHTML = "1-8";
+			}
+			
+			if (vaultNumber == 19)
+			{
+				tmp = "";
+				for(i=0; i < 8; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 9) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-9";
+			}
+			
+			if (vaultNumber == 20)
+			{
+				tmp = "";
+				for(i=0; i < 9; i++ )
+				{
+					randomNumber = parseInt(Math.random() * 9) +1;
+					tmp += randomNumber;
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-9";
+			}
+			if (vaultNumber > 20)
+			{
+				tmp = "";
+				for (i = 0; i < (vaultNumber- 11); i++)
+				{
+					randomNumber = parseInt(Math.random() * 9) + 1;
+					tmp += randomNumber
+				}
+				vaultCode = tmp;
+				document.getElementById("rangeOfDigits").innerHTML = "1-9";
+			}
+		}
+		
+		function vaultDigCounter(digId)
+		{
+			if (digId == 1)
+			{
+				vaultInput1 ++;
+			}
+			
+			if (digId == 2)
+			{
+				vaultInput2 ++;
+			}
+			
+			if (digId == 3)
+			{
+				vaultInput3 ++;
+			}
+			
+			if (digId == 4)
+			{
+				vaultInput4 ++;
+			}
+			
+			if (digId == 5)
+			{
+				vaultInput5 ++;
+			}
+			
+			if (digId == 6)
+			{
+				vaultInput6 ++;
+			}
+			
+			if (digId == 7)
+			{
+				vaultInput7 ++;
+			}
+			
+			if (digId == 8)
+			{
+				vaultInput8 ++;
+			}
+			
+			if (digId == 9)
+			{
+				vaultInput9 ++;
+			}
+			
+			if (digId > 9)
+			{
+				tmp6 ="";
+				tmp7 ="";
+				tmp8 ="";
+				
+				for (i=0; i<(vaultNumber -11); i++)
+				{
+					tmp6 = i + 10;
+					tmp7 = tmp6.toString();
+					tmp8 = "vaultInput" + tmp7;
+					tmp8++;
+				}
+			}
+			
+			codeLimit();
+			displayDigits();
+		}
+		
+		function checkCode()
+		{
+			if (vaultNumber == 1 || vaultNumber == 2 || vaultNumber == 3 || vaultNumber == 4 )
+			{
+				
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+				
+			}
+			
+			if (vaultNumber == 5 || vaultNumber == 6 || vaultNumber == 7 || vaultNumber == 8 )
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber == 9 || vaultNumber == 10 || vaultNumber == 11)
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString() + vaultInput5.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber == 12 || vaultNumber == 13 || vaultNumber == 14)
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString() + vaultInput5.toString() + vaultInput6.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber == 15 || vaultNumber == 16 || vaultNumber == 17)
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString() + vaultInput5.toString() + vaultInput6.toString() + vaultInput7.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber == 18 || vaultNumber == 19)
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString() + vaultInput5.toString() + vaultInput6.toString() + vaultInput7.toString() + vaultInput8.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber == 20)
+			{
+				userInput = vaultInput1.toString() + vaultInput2.toString() + vaultInput3.toString() + vaultInput4.toString() + vaultInput5.toString() + vaultInput6.toString() + vaultInput7.toString() + vaultInput8.toString() + vaultInput9.toString();
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			if (vaultNumber > 20)
+			{
+				tmp1 = "";
+				tmp2= "";
+				for (i=1; i< (vaultNumber-11); i++)
+				{
+					i.toString();
+					tmp2 = vaultInput + i;
+					tmp2.toString();
+					
+					tmp1 += tmp2; 
+				}
+				userInput = tmp1;
+				
+				if (userInput == vaultCode)
+				{
+					userMoney = userMoney + vaultNumber * ( parseInt(Math.random() * 6) +1 ) * 1000;
+					
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					jewelFinder();
+					poorStore();
+				}
+				else
+				{
+					parseInt(userInput);
+					parseInt(vaultCode);
+					
+					if (userInput > vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "HIGH";
+					}
+					if (userInput < vaultCode)
+					{
+						document.getElementById("highOrLow").innerHTML = "LOW";
+					}
+				}
+			}
+			
+			document.getElementById("amtMoney").innerHTML = userMoney;
+			document.getElementById("amtMoney2").innerHTML = userMoney;
+			counterTimer();
+		}
+		
+		function codeLimit()
+		{
+			if (vaultNumber == 1)
+			{
+				if (vaultInput1 >3)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >3)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >3)
+				{
+					vaultInput3 = 1;
+				}
+			}
+			
+			if (vaultNumber == 2)
+			{
+				if (vaultInput1 >4)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >4)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >4)
+				{
+					vaultInput3 = 1;
+				}
+			}
+			
+			if (vaultNumber == 3)
+			{
+				if (vaultInput1 >5)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >5)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >5)
+				{
+					vaultInput3 = 1;
+				}
+			}
+			
+			if (vaultNumber == 4)
+			{
+				if (vaultInput1 >6)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >6)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >6)
+				{
+					vaultInput3 = 0;
+				}
+			}
+			
+			if (vaultNumber == 5)
+			{
+				if (vaultInput1 >4)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >4)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >4)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >4)
+				{
+					vaultInput4 = 1;
+				}
+			}	
+
+			if (vaultNumber == 6)
+			{
+				if (vaultInput1 >5)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >5)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >5)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >5)
+				{
+					vaultInput4 = 1;
+				}
+			}	
+
+			if (vaultNumber == 7)
+			{
+				if (vaultInput1 >6)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >6)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >6)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >6)
+				{
+					vaultInput4 = 1;
+				}
+			}
+
+			if (vaultNumber == 8)
+			{
+				if (vaultInput1 >7)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >7)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >7)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >7)
+				{
+					vaultInput4 = 1;
+				}
+			}			
+
+			if (vaultNumber == 9)
+			{
+				if (vaultInput1 >5)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >5)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >5)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >5)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >5)
+				{
+					vaultInput5 = 1;
+				}				
+			}	
+
+			if (vaultNumber == 10)
+			{
+				if (vaultInput1 >6)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >6)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >6)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >6)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >6)
+				{
+					vaultInput5 = 1;
+				}				
+			}		
+
+			if (vaultNumber == 11)
+			{
+				if (vaultInput1 >7)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >7)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >7)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >7)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >7)
+				{
+					vaultInput5 = 1;
+				}				
+			}	
+
+			if (vaultNumber == 12)
+			{
+				if (vaultInput1 >6)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >6)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >6)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >6)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >6)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >6)
+				{
+					vaultInput6 = 1;
+				}
+			}			
+
+			if (vaultNumber == 13)
+			{
+				if (vaultInput1 >7)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >7)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >7)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >7)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >7)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >7)
+				{
+					vaultInput6 = 1;
+				}
+			}
+
+			if (vaultNumber == 14)
+			{
+				if (vaultInput1 >8)
+				{
+					vaultInput1 = 1
+				}
+				if (vaultInput2 >8)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >8)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >8)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >8)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >8)
+				{
+					vaultInput6 = 1;
+				}
+			}		
+
+			if (vaultNumber == 15)
+			{
+				if (vaultInput1 >7)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >7)
+				{
+					vaultInput2 = 1
+				}
+				if (vaultInput3 >7)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >7)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >7)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >7)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >7)
+				{
+					vaultInput7 = 1;
+				}
+			}		
+
+			if (vaultNumber == 16)
+			{
+				if (vaultInput1 >8)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >8)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >8)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >8)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >8)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >8)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >8)
+				{
+					vaultInput7 = 1;
+				}
+			}
+
+			if (vaultNumber == 17)
+			{
+				if (vaultInput1 >9)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >9)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >9)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >9)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >9)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >9)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >9)
+				{
+					vaultInput7 = 1; 
+				}
+			}	
+			
+			if (vaultNumber == 18)
+			{
+				if (vaultInput1 >8)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >8)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >8)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >8)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >8)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >8)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >8)
+				{
+					vaultInput7 = 1;
+				}
+				if (vaultInput8 >8)
+				{
+					vaultInput8 = 1;
+				}
+			}	
+			
+			if (vaultNumber == 19)
+			{
+				if (vaultInput1 >9)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >9)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >9)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >9)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >9)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >9)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >9)
+				{
+					vaultInput7 = 1;
+				}
+				if (vaultInput8 >9)
+				{
+					vaultInput8 = 1;
+				}
+			}	
+			
+			if (vaultNumber == 20)
+			{
+				if (vaultInput1 >9)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >9)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >9)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >9)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >9)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >9)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >9)
+				{
+					vaultInput7 = 1;
+				}
+				if (vaultInput8 >9)
+				{
+					vaultInput8 = 1;
+				}
+				if (vaultInput9 >9)
+				{
+					vaultInput9 = 1;
+				}
+			}
+			
+			if (vaultNumber >20)
+			{
+				if (vaultInput1 >9)
+				{
+					vaultInput1 = 1;
+				}
+				if (vaultInput2 >9)
+				{
+					vaultInput2 = 1;
+				}
+				if (vaultInput3 >9)
+				{
+					vaultInput3 = 1;
+				}
+				if (vaultInput4 >9)
+				{
+					vaultInput4 = 1;
+				}
+				if (vaultInput5 >9)
+				{
+					vaultInput5 = 1;
+				}
+				if (vaultInput6 >9)
+				{
+					vaultInput6 = 1;
+				}
+				if (vaultInput7 >9)
+				{
+					vaultInput7 = 1;
+				}
+				if (vaultInput8 >9)
+				{
+					vaultInput8 = 1;
+				}
+				if (vaultInput9 >9)
+				{
+					vaultInput9 = 1;
+				}
+				tmp10 ="";
+				tmp11 ="";
+				tmp12 ="";
+				for (i=0; i < (vaultNumber -20); i++)
+				{
+					tmp10 = i+10;
+					tmp11 = tmp10.toString();
+					tmp12 = "vaultInput" + tmp7;
+					
+					if (tmp12 > 9)
+					{
+						tmp12 = 1;
+					}
+				}
+			}
+		}
+		
+		function returnToGame()
+		{		
+			document.getElementById("vaultStore").style.display = "none" ;
+			document.getElementById("vaultGame").style.display = "inline";	
+			
+			if (vaultNumber > 20)
+			{
+				tmp3 = "";
+				tmp4 = "";
+				tmp5 = "";
+				
+				for (i=vaultNumber; i < (vaultNumber +1); i++)
+				{
+					tmp3 = i-10;
+					tmp4 = tmp3.toString();
+					tmp5 = "dig" + tmp4;
+					
+					btn = document.createElement("button");
+					text = document.createTextNode("-");
+					btn.setAttribute('id', 'tmp5')
+					btn.setAttribute('onclick','vaultDigCounter(tmp3)')
+					btn.appendChild(text);
+					document.getElementById("vaultButtons").appendChild(btn);
+				}
+			}
+			
+			vaultNumber ++;
+			inputToZero();
+			vaultRange();
+			userTimer();
+			document.getElementById("vaultLevel").innerHTML = vaultNumber;
+			
+			if (vaultNumber == 5)
+			{
+				document.getElementById("dig4").style.display = "inline";
+			}
+			if (vaultNumber == 9)
+			{
+				document.getElementById("dig5").style.display = "inline";
+			}
+			if (vaultNumber == 12)
+			{
+				document.getElementById("dig6").style.display = "inline";
+			}
+			if (vaultNumber == 15)
+			{	
+				document.getElementById("dig7").style.display = "inline";
+			}
+			if (vaultNumber == 18)
+			{
+				document.getElementById("dig8").style.display = "inline";
+			}
+			if (vaultNumber == 20)
+			{
+				document.getElementById("dig9").style.display = "inline";
+			}
+
+		}
+		
+		function inputInteger()
+		{
+			parseInt(vaultInput1); 
+			parseInt(vaultInput2); 
+			parseInt(vaultInput3); 
+			parseInt(vaultInput4); 
+			parseInt(vaultInput5); 
+			parseInt(vaultInput6); 
+			parseInt(vaultInput7); 
+			parseInt(vaultInput8); 
+			parseInt(vaultInput9); 
+		}
+		
+		function displayDigits()
+		{
+			document.getElementById("dig1").innerHTML = vaultInput1;
+			document.getElementById("dig2").innerHTML = vaultInput2;
+			document.getElementById("dig3").innerHTML = vaultInput3;
+			document.getElementById("dig4").innerHTML = vaultInput4;
+			document.getElementById("dig5").innerHTML = vaultInput5;
+			document.getElementById("dig6").innerHTML = vaultInput6;
+			document.getElementById("dig7").innerHTML = vaultInput7;
+			document.getElementById("dig8").innerHTML = vaultInput8;
+			document.getElementById("dig9").innerHTML = vaultInput9;
+			tmp13 ="";
+			tmp14 ="";
+			tmp15="";
+			tmp16="";
+			for (i=0; i<(vaultNumber -11); i++)
+			{
+				tmp13 = i + 10;
+				tmp14 = tmp13.toString();
+				tmp15 = "dig" + tmp14;
+				tmp16 = "vaultInput" + tmp14;
+				document.getElementById("tmp15").innerHTML = tmp16;
+			}
+		}
+		
+		function userTimer()
+		{
+			if ( vaultNumber >= 1 && 10 >= vaultNumber)
+			{
+				userAttempts = vaultNumber + 4 + Math.floor(vaultNumber/10) + parseInt(Math.random() * (vaultNumber+1));
+				document.getElementById("amtOfTurns").innerHTML = userAttempts;
+			}
+			
+			if ( vaultNumber >= 11 && 20 >= vaultNumber)
+			{
+				userAttempts = userAttempts + 1 + Math.floor(vaultNumber/10) + parseInt(Math.random() * (vaultNumber + 1));
+				document.getElementById("amtOfTurns").innerHTML = userAttempts;
+			}
+			if ( vaultNumber > 20 )
+			{
+				userAttempts = 1 + Math.floor(vaultNumber/10) + parseInt(Math.random() * (vaultNumber+1));
+				document.getElementById("amtOfTurns").innerHTML = userAttempts;
+			}
+			totalAttempts = userAttempts;
+		}
+		
+		function counterTimer()
+		{
+			totalAttempts = totalAttempts - 1;
+			document.getElementById("amtOfTurns").innerHTML = totalAttempts;
+			
+			if (totalAttempts == 0)
+			{
+				finalAttempt = 3;
+				document.getElementById("amtOfTurns").innerHTML = "you is got " + finalAttempt + " attempts left";
+			}
+			if (totalAttempts < 0)
+			{
+				finalAttempt = finalAttempt -1;
+				document.getElementById("amtOfTurns").innerHTML = "you is got " + finalAttempt + " attempts left";
+			}
+			if (totalAttempts == -3)
+			{
+				if (userHenchmen == true)
+				{
+					randomNumver = parseInt(Math.random() * 6) +1;
+					henchmenTurns = randomNumver;
+					henchmenTurns = henchmenTurns - 1;
+					
+					document.getElementById("amtOfTurns").innerHTML = "Your Henchmen is fighting Now for" + henchmenTurns + "turns";
+					if (henchmenTurns == 0)
+					{
+						document.getElementById("vaultStore").style.display = "none" ;
+						document.getElementById("vaultGame").style.display = "none";
+						document.getElementById("winPage").style.display = "none";
+						document.getElementById("losePage").style.display = "inline";
+					}
+				}
+				else
+				{
+					document.getElementById("vaultStore").style.display = "none" ;
+					document.getElementById("vaultGame").style.display = "none";
+					document.getElementById("winPage").style.display = "none";
+					document.getElementById("losePage").style.display = "inline";
+				}
+			}
+		}
+		
+		function jewelFinder()
+		{
+			jewelNumber =  parseInt(Math.random() * 100) +1
+			jewelChance = vaultNumber + jewelNumber;
+			
+			if (vaultNumber >99)
+			{
+				jewelChance = parseInt(Math.random() * 100) +1;
+				if (jewelChance == 1)
+				{
+					//nothing happens lol just 1/100 losing a chance which is = to 99% chance of winning although i doubt anyone will get to 99 unless you cheat
+				}
+				else
+				{
+					document.getElementById("vaultStore").style.display = "none" ;
+					document.getElementById("vaultGame").style.display = "none";
+					document.getElementById("winPage").style.display = "inline";
+					document.getElementById("losePage").style.display = "none";
+				}
+			}
+			
+			if (jewelChance > 100)
+			{
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "none";
+				document.getElementById("winPage").style.display = "inline";
+				document.getElementById("losePage").style.display = "none";
+			}
+		}
+		
+		function resetTheGame()
+		{
+			inputToZero();
+			vaultNumber = 1;
+			vaultCode = "";
+			userInput = "";
+			vaultInput1 = 0;
+			vaultInput2 = 0;
+			vaultInput3 = 0;
+			vaultInput4 = 0;
+			vaultInput5 = 0;
+			vaultInput6 = 0;
+			vaultInput7 = 0;
+			vaultInput8 = 0;
+			vaultInput9 = 0;
+			userMoney = 0;
+			document.getElementById("amtMoney").innerHTML = userMoney;
+			document.getElementById("highOrLow").innerHTML = "";
+			userAtempts = 0;
+			vaultRange();
+			chosenStoreItem = 0;
+			document.getElementById("useItem").innerHTML = "Item Name";
+			userTimer();
+			document.getElementById("vaultStore").style.display = "none" ;
+			document.getElementById("vaultGame").style.display = "inline";
+			document.getElementById("winPage").style.display = "none";
+			document.getElementById("losePage").style.display = "none";
+			document.getElementById("vaultLevel").innerHTML = vaultNumber;
+			document.getElementById("dig4").style.display = "none";
+			document.getElementById("dig5").style.display = "none";
+			document.getElementById("dig6").style.display = "none";
+			document.getElementById("dig7").style.display = "none";
+			document.getElementById("dig8").style.display = "none";
+			document.getElementById("dig9").style.display = "none";
+			userHenchmen = false;
+		}
+		
+		function userItems(chosenItem)
+		{
+			if (chosenItem == 1)
+			{
+				chosenStoreItem = 1;
+				userMoney = userMoney - 1000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "LockPick";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+			
+			if (chosenItem == 2)
+			{
+				chosenStoreItem = 2;
+				userMoney = userMoney - 5000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "Dynamite";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+			
+			if (chosenItem == 3)
+			{
+				chosenStoreItem = 3;
+				userMoney = userMoney - 2000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "Magnet";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+			
+			if (chosenItem == 4)
+			{
+				chosenStoreItem = 4;
+				userMoney = userMoney - 20000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "Stealth Suit";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+			
+			if (chosenItem == 5)
+			{
+				chosenStoreItem = 5;
+				userMoney = userMoney - 50000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "Click to Activate the Lawyer";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+			
+			if (chosenItem == 6)
+			{
+				chosenStoreItem = 6;
+				userMoney = userMoney - 75000;
+				document.getElementById("amtMoney").innerHTML = userMoney;
+				document.getElementById("amtMoney2").innerHTML = userMoney;
+				document.getElementById("useItem").innerHTML = "Henchmen";
+				document.getElementById("vaultStore").style.display = "none" ;
+				document.getElementById("vaultGame").style.display = "inline";
+				document.getElementById("winPage").style.display = "none";
+				document.getElementById("losePage").style.display = "none";
+				returnToGame();
+			}
+		}
+		
+		function itemUsage()
+		{
+			if (chosenStoreItem == 1)
+			{
+				lock = vaultCode.toString();
+				lockn = lock.length;
+				randomN = parseInt((Math.random() * lockn) +1);
+				theNumber = lock.charAt(randomN - 1 );
+				document.getElementById("dig" + randomN.toString()).innerHTML = theNumber;
+				chosenStoreItem = 0;
+				document.getElementById("useItem").innerHTML = "Item Name";
+				
+				document.getElementById("lawyerButton").style.display = "none";
+				userHenchmen = false;
+			}
+			
+			if (chosenStoreItem == 2)
+			{
+				jewelNumber =  parseInt(Math.random() * 100) +1;
+				jewelChance = vaultNumber + jewelNumber;
+			
+				if (vaultNumber >99)
+				{
+					jewelChance = parseInt(Math.random() * 100) +1;
+					if (jewelChance == 1)
+					{
+						document.getElementById("vaultStore").style.display = "inline" ;
+						document.getElementById("vaultGame").style.display = "none";
+						document.getElementById("winPage").style.display = "none";
+						document.getElementById("losePage").style.display = "none";
+					}
+					else
+					{
+						document.getElementById("vaultStore").style.display = "none" ;
+						document.getElementById("vaultGame").style.display = "none";
+						document.getElementById("winPage").style.display = "none";
+						document.getElementById("losePage").style.display = "inline";
+					}
+				}
+			
+				if (jewelChance > 100)
+				{
+					document.getElementById("vaultStore").style.display = "none" ;
+					document.getElementById("vaultGame").style.display = "none";
+					document.getElementById("winPage").style.display = "none";
+					document.getElementById("losePage").style.display = "inline";
+				}
+				else
+				{
+					document.getElementById("vaultStore").style.display = "inline" ;
+					document.getElementById("vaultGame").style.display = "none";
+					document.getElementById("winPage").style.display = "none";
+					document.getElementById("losePage").style.display = "none";
+				}
+				chosenStoreItem = 0;
+				document.getElementById("useItem").innerHTML = "Item Name";
+				document.getElementById("lawyerButton").style.display = "none";
+				userHenchmen = false;
+			}
+			
+			if (chosenStoreItem == 3)
+			{
+				percentNum =  parseInt(Math.random() * 100) +1;
+				if (percentNum < 11)
+				{	
+					userAttempts = 0;
+				}
+				else
+				{
+					percentNum2 =  parseInt(Math.random() * 100) +1;
+					if (percentNum2 < 41)
+					{	
+						chosenStoreItem = 0;
+						document.getElementById("useItem").innerHTML = "Item Name";
+					}
+					else
+					{
+						chanceNum = parseInt(Math.random() * 6) +1;
+						chanceNum = chanceNum -1;
+						userAttempts = userAttempts + chanceNum;
+						
+						
+						chosenStoreItem = 0;
+						document.getElementById("useItem").innerHTML = "Item Name";
+					}
+				}
+				document.getElementById("lawyerButton").style.display = "none";
+				userHenchmen = false;
+			}
+			
+			if (chosenStoreItem == 4)
+			{
+				numOfUses = parseInt(Math.random() * 4) +1;
+				lifetimeUses = numOfUses;
+				lifetimeUses = lifetimeUses -1;
+				if (lifetimeUses == 0)
+				{
+					chosenStoreItem = 0;
+					document.getElementById("useItem").innerHTML = "Item Name";
+				}
+				else
+				{
+					returnToGame();
+				}
+				document.getElementById("lawyerButton").style.display = "none";
+				userHenchmen = false;
+			}
+			
+			if (chosenStoreItem == 5)
+			{
+				document.getElementById("useItem").innerHTML = "Lawyer is now Active";
+				document.getElementById("lawyerButton").style.display = "inline";
+				userHenchmen = false;
+			}
+			
+			if (chosenStoreItem == 6)
+			{
+				userHenchmen = true;
+				document.getElementById("lawyerButton").style.display = "none";
+			}
+		}
+		
+		function poorStore()
+		{
+			if (userMoney < 75000)
+			{
+				document.getElementById("storeH").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeH").disabled = false;
+			}
+			if (userMoney < 50000)
+			{
+				document.getElementById("storeLa").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeLa").disabled = false;
+			}
+			if (userMoney < 20000)
+			{
+				document.getElementById("storeS").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeS").disabled = false;
+			}
+			if (userMoney < 5000)
+			{
+				document.getElementById("storeD").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeD").disabled = false;
+			}
+			if (userMoney < 2000)
+			{
+				document.getElementById("storeM").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeM").disabled = false;
+			}
+			if (userMoney < 1000)
+			{
+				document.getElementById("storeL").disabled = true;
+			}
+			else
+			{
+				document.getElementById("storeL").disabled = false;
+			}		
+		}
+		
+		function userLawyer()
+		{
+			document.getElementById("vaultStore").style.display = "none" ;
+			document.getElementById("vaultGame").style.display = "inline";
+			document.getElementById("winPage").style.display = "none";
+			document.getElementById("losePage").style.display = "none";
+			userTimer();
+			chosenStoreItem = 0;
+			document.getElementById("useItem").innerHTML = "Item Name";
+		}
+		</script>
+		
+		<style>
+		body 
+		{
+			text-align:center;
+			background-color:#66CCFF;
+			background-image: radial-gradient(#fff 10%, transparent 10%);
+			radial-gradient(#fff 10%, transparent 10%);
+			background-size: 30px 30px;
+			background-position: 0 0, 15px 15px;
+		}
+		span#storeItems
+		{
+			display:inline-block;
+			width:14%; 
+			vertical-align:top; 
+			text-align:justify;
+			padding:0px 7px;
+			border: thin solid black;
+		}
+		img
+		{
+			position:fixed; 
+			top:0px; 
+			left:0px; 
+			width:100%; 
+			height:100%;
+			z-index:-1;
+		}
+		
+		button
+		{
+			background:#E0EDFE;
+			border-color:#2B5783;
+			border-radius:10px;
+			padding:6px 12px;
+			font-weight:bold;
+			color:#2B5783;
+		}
+		
+		#vaultGame
+		{
+			color:#003366;
+			font-weight:bold;
+		}
+		</style>
+	</head>
+	
+	<body onload = "vaultRange(); userTimer();">
+		
+		<div id ="vaultGame">
+			<h1> Vault # <span id = "vaultLevel"></span></h1>
+			
+			</br>
+			<div>Vault Buttons</div>
+			</br>
+			
+			<button id = "dig1" onclick = "vaultDigCounter('1')">-</button>
+			<button id = "dig2" onclick = "vaultDigCounter('2')">-</button>
+			<button id = "dig3" onclick = "vaultDigCounter('3')">-</button>
+			<button id = "dig4" onclick = "vaultDigCounter('4')">-</button>
+			<button id = "dig5" onclick = "vaultDigCounter('5')">-</button>
+			<button id = "dig6" onclick = "vaultDigCounter('6')">-</button>
+			<button id = "dig7" onclick = "vaultDigCounter('7')">-</button>
+			<button id = "dig8" onclick = "vaultDigCounter('8')">-</button>
+			<button id = "dig9" onclick = "vaultDigCounter('9')">-</button>
+			</br>
+			
+			<div id = "vaultButtons"></div>
+			
+			</br>
+			
+			<button onclick = "inputToZero2();">Clear Your Code</button>
+			
+			</br>
+			
+			Range of Digits<div id ="rangeOfDigits"></div>
+			
+			</br>
+			
+			<button onclick ="checkCode()">Check The Code</button>
+			
+			</br>		
+			
+			Amount of Attempts<div id = "amtOfTurns"></div>
+			
+			</br>
+			
+			High or Low<div id = "highOrLow"></div>
+			
+			</br>
+			
+			Amount of Money<div id = "amtMoney"></div>
+			
+			</br>
+			
+			<button id = "useItem" onclick = "itemUsage()" >Item Name</button>
+			
+			</br>
+			
+			<button id = "resetGame" onclick = "resetTheGame()">RESET THE GAME</button>
+		</div>
+		
+		
+		<div id ="vaultStore">
+			<h1> The Store </h1>
+			
+			</br>
+			 
+			 Amount of Money<div id = "amtMoney2"></div>
+			 
+			</br>
+			
+			<div>
+				<span id = "storeItems">
+					Lockpick
+					</br>
+					$1,000
+					</br>
+					
+					<button id ="storeL" onclick = "userItems('1')">Lockpick</button>
+
+				</span>
+				
+				<span id = "storeItems">
+					Dynamite
+					</br>
+					$5,000
+					</br>
+					
+					<button id ="storeD" onclick = "userItems('2')">Dynamite</button>
+
+				</span>
+				
+				<span id = "storeItems">
+					Magnet
+					</br>
+					$2,000
+					</br>
+					
+					<button id ="storeM" onclick = "userItems('3')">Magnet</button>
+					
+				</span>
+				
+				<span id = "storeItems">
+					Stealth Suit
+					</br>
+					$20,000
+					</br>
+					
+					<button id ="storeS" onclick = "userItems('4')">Stealth Suit</button>
+
+				</span>
+				
+				<span id = "storeItems">
+					Lawyer
+					</br>
+					$50,000
+					</br>
+					
+					<button id ="storeLa" onclick = "userItems('5')">Lawyer</button>
+
+				</span>
+				
+				<span id = "storeItems">
+					Henchmen
+					</br>
+					$75,000
+					</br>
+					
+					<button id ="storeH" onclick = "userItems('6')">Henchmen</button>
+
+				</span>
+			</div>
+			</br>
+			<button id = "returnGame" onclick = "returnToGame()">Back to Cracking</button>
+			</br>
+			<button id = "resetGame" onclick = "resetTheGame()">RESET THE GAME</button>
+			
+		</div>
+		
+		<div id = "winPage">
+		<img src ="jewels.jpg"></img>
+		<h1> You found them Jewels, now go buy some ICE CREAM ^~^</h1>
+		</br>
+		<button id ="resetGame" onclick = "resetTheGame()">RESET THE GAME</button>
+		
+		</div>
+		
+		<div id = "losePage">
+		<img src ="jail.png"></img>
+		<h1>You were arrested LOL, now go to jail with MR. MONOPOLY</h1>
+		</br>
+		<button id ="lawyerButton" onclick ="userLawyer()">Use Your Lawyer</button>
+		</br>
+		<button id ="resetGame" onclick = "resetTheGame()">RESET THE GAME</button>
+		
+		</div>
+		
+	<script>
+		document.getElementById("vaultStore").style.display = "none" ;
+		document.getElementById("vaultGame").style.display = "inline";
+		
+		document.getElementById("dig4").style.display = "none";
+		document.getElementById("dig5").style.display = "none";
+		document.getElementById("dig6").style.display = "none";
+		document.getElementById("dig7").style.display = "none";
+		document.getElementById("dig8").style.display = "none";
+		document.getElementById("dig9").style.display = "none";
+		
+		document.getElementById("winPage").style.display = "none";
+		document.getElementById("losePage").style.display = "none";
+		
+		document.getElementById("lawyerButton").style.display = "none";
+		document.getElementById("vaultLevel").innerHTML = vaultNumber;
+		
+	</script>
+	
+	</body>
+</html>
