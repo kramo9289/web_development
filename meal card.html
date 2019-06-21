@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<!-- Kevin Ramos -->
+<html>
+	<head>
+		<title>
+			Meal Card
+		</title>
+		
+		<script type = "text/javascript">
+		checkmark = "&#10003";
+		soupChoice = "You did not make a choice :P";
+		appetizerChoice = "You did not make a choice :P";
+		entreeChoice = "You did not make a choice :P";
+		dessertChoice = "You did not make a choice :P";
+		
+		function checks1()
+		{myElement = document.getElementById("soup1");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("soup2").disabled = true;
+		myElement = document.getElementById("soup3").disabled = true;
+		myElement = document.getElementById("soup4").disabled = true;
+		var soupChoice = "Caviar Soup";
+		myElement = document.getElementById("soupchoice");
+		myElement.innerHTML = soupChoice;}
+		function checks2()
+		{myElement = document.getElementById("soup2");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("soup1").disabled = true;
+		myElement = document.getElementById("soup3").disabled = true;
+		myElement = document.getElementById("soup4").disabled = true;
+		var soupChoice = "AnQi Pho";
+		myElement = document.getElementById("soupchoice");
+		myElement.innerHTML = soupChoice;}
+		function checks3()
+		{myElement = document.getElementById("soup3");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("soup1").disabled = true;
+		myElement = document.getElementById("soup2").disabled = true;
+		myElement = document.getElementById("soup4").disabled = true;
+		var soupChoice = "Buddha Jumps Over the Wall";
+		myElement = document.getElementById("soupchoice");
+		myElement.innerHTML = soupChoice;}
+		function checks4()
+		{myElement = document.getElementById("soup4");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("soup1").disabled = true;
+		myElement = document.getElementById("soup2").disabled = true;
+		myElement = document.getElementById("soup3").disabled = true;
+		var soupChoice = "Loaded Potato Soup";
+		myElement = document.getElementById("soupchoice");
+		myElement.innerHTML = soupChoice;}
+		
+		function checka1()
+		{myElement = document.getElementById("appetizer1");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("appetizer2").disabled = true;
+		myElement = document.getElementById("appetizer3").disabled = true;
+		myElement = document.getElementById("appetizer4").disabled = true;
+		var appetizerChoice = "Stuffed Golden Mushrooms with Pecans";
+		myElement = document.getElementById("appetizerchoice");
+		myElement.innerHTML = appetizerChoice;}
+		function checka2()
+		{myElement = document.getElementById("appetizer2");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("appetizer1").disabled = true;
+		myElement = document.getElementById("appetizer3").disabled = true;
+		myElement = document.getElementById("appetizer4").disabled = true;
+		var appetizerChoice = "Tiny Diamond Encrusted Tomato Tarts";
+		myElement = document.getElementById("appetizerchoice");
+		myElement.innerHTML = appetizerChoice;}
+		function checka3()
+		{myElement = document.getElementById("appetizer3");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("appetizer1").disabled = true;
+		myElement = document.getElementById("appetizer2").disabled = true;
+		myElement = document.getElementById("appetizer4").disabled = true;
+		var appetizerChoice = "Marinated Mozzarella With Rubies";
+		myElement = document.getElementById("appetizerchoice");
+		myElement.innerHTML = appetizerChoice;}
+		function checka4()
+		{myElement = document.getElementById("appetizer4");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("appetizer1").disabled = true;
+		myElement = document.getElementById("appetizer2").disabled = true;
+		myElement = document.getElementById("appetizer3").disabled = true;
+		var appetizerChoice = "Green Goddess Dipping Sauce With Albino Shrimp";
+		myElement = document.getElementById("appetizerchoice");
+		myElement.innerHTML = appetizerChoice;}
+		
+		function checke1()
+		{myElement = document.getElementById("entree1");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("entree2").disabled = true;
+		myElement = document.getElementById("entree3").disabled = true;
+		myElement = document.getElementById("entree4").disabled = true;
+		var entreeChoice = "Spicy Honey-Brushed Endangered Chicken Thighs";
+		myElement = document.getElementById("entreechoice");
+		myElement.innerHTML = entreeChoice;}
+		function checke2()
+		{myElement = document.getElementById("entree2");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("entree1").disabled = true;
+		myElement = document.getElementById("entree3").disabled = true;
+		myElement = document.getElementById("entree4").disabled = true;
+		var entreeChoice = "Spaghetti With Emerald Meatballs";
+		myElement = document.getElementById("entreechoice");
+		myElement.innerHTML = entreeChoice;}
+		function checke3()
+		{myElement = document.getElementById("entree3");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("entree1").disabled = true;
+		myElement = document.getElementById("entree2").disabled = true;
+		myElement = document.getElementById("entree4").disabled = true;
+		var entreeChoice = "Miso-Glazed Salmon";
+		myElement = document.getElementById("entreechoice");
+		myElement.innerHTML = entreeChoice;}
+		function checke4()
+		{myElement = document.getElementById("entree4");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("entree1").disabled = true;
+		myElement = document.getElementById("entree2").disabled = true;
+		myElement = document.getElementById("entree3").disabled = true;
+		var entreeChoice = "Shrimp and Broccoli Stir-Fry With Gold and Diamond Shavings";
+		myElement = document.getElementById("entreechoice");
+		myElement.innerHTML = entreeChoice;}
+		
+		function checkd1()
+		{myElement = document.getElementById("dessert1");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("dessert2").disabled = true;
+		myElement = document.getElementById("dessert3").disabled = true;
+		myElement = document.getElementById("dessert4").disabled = true;
+		var dessertChoice = "Krispy Kreme's Luxe Doughnut";
+		myElement = document.getElementById("dessertchoice");
+		myElement.innerHTML = dessertChoice;}
+		function checkd2()
+		{myElement = document.getElementById("dessert2");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("dessert1").disabled = true;
+		myElement = document.getElementById("dessert3").disabled = true;
+		myElement = document.getElementById("dessert4").disabled = true;
+		var dessertChoice = "Golden Opulence Sundae";
+		myElement = document.getElementById("dessertchoice");
+		myElement.innerHTML = dessertChoice;}
+		function checkd3()
+		{myElement = document.getElementById("dessert3");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("dessert1").disabled = true;
+		myElement = document.getElementById("dessert2").disabled = true;
+		myElement = document.getElementById("dessert4").disabled = true;
+		var dessertChoice = "Strawberries Arnaud";
+		myElement = document.getElementById("dessertchoice");
+		myElement.innerHTML = dessertChoice;}
+		function checkd4()
+		{myElement = document.getElementById("dessert4");
+		myElement.innerHTML = checkmark;	
+		myElement = document.getElementById("dessert1").disabled = true;
+		myElement = document.getElementById("dessert2").disabled = true;
+		myElement = document.getElementById("dessert3").disabled = true;
+		var dessertChoice = "The Golden Phoenix Cupcake";
+		myElement = document.getElementById("dessertchoice");
+		myElement.innerHTML = dessertChoice;}
+		
+		function reset1()
+		{var xmark = "X";
+		myElement = document.getElementById("soup1");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("soup2");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("soup3");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("soup4");
+		myElement.innerHTML = xmark;
+		
+		myElement = document.getElementById("soup1").disabled = false;
+		myElement = document.getElementById("soup2").disabled = false;
+		myElement = document.getElementById("soup3").disabled = false;
+		myElement = document.getElementById("soup4").disabled = false;}
+		
+		function reset2()
+		{var xmark = "X";
+		myElement = document.getElementById("appetizer1");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("appetizer2");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("appetizer3");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("appetizer4");
+		myElement.innerHTML = xmark;
+		
+		myElement = document.getElementById("appetizer1").disabled = false;
+		myElement = document.getElementById("appetizer2").disabled = false;
+		myElement = document.getElementById("appetizer3").disabled = false;
+		myElement = document.getElementById("appetizer4").disabled = false;}
+		
+		function reset3()
+		{var xmark = "X";
+		myElement = document.getElementById("entree1");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("entree2");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("entree3");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("entree4");
+		myElement.innerHTML = xmark;
+		
+		myElement = document.getElementById("entree1").disabled = false;
+		myElement = document.getElementById("entree2").disabled = false;
+		myElement = document.getElementById("entree3").disabled = false;
+		myElement = document.getElementById("entree4").disabled = false;}
+		
+		function reset4()
+		{var xmark = "X";
+		myElement = document.getElementById("dessert1");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("dessert2");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("dessert3");
+		myElement.innerHTML = xmark;
+		myElement = document.getElementById("dessert4");
+		myElement.innerHTML = xmark;
+		
+		myElement = document.getElementById("dessert1").disabled = false;
+		myElement = document.getElementById("dessert2").disabled = false;
+		myElement = document.getElementById("dessert3").disabled = false;
+		myElement = document.getElementById("dessert4").disabled = false;}
+		
+		function submit()
+		{document.getElementById("invisible").style.display = "inline" 
+		document.getElementById("wholemenu").style.display = "none"}
+		
+		function displaychoice()
+		{myElement = document.getElementById("soupchoice");
+		myElement.innerHTML = soupChoice;
+		myElement = document.getElementById("appetizerchoice");
+		myElement.innerHTML = appetizerChoice;
+		myElement = document.getElementById("entreechoice");
+		myElement.innerHTML = entreeChoice;
+		myElement = document.getElementById("dessertchoice");
+		myElement.innerHTML = dessertChoice;}		
+		
+		</script>
+		
+		<style type = "text/css">
+		body {
+			background-color:#424242;
+			border:dotted 20px #701112;
+			margin-right:20%;
+			margin-left:20%;
+				}
+			
+		div#wholemenu {
+			text-align:center;
+				}
+		
+		div.selections, .top, .menu {
+			background-color:#FFF8DC;
+				}
+				
+		div.top, .menu {
+			border:double 20px #701112;
+				}
+				
+		button {
+			background:#FFF8DC;
+			border-color:#701112;
+			border-radius:10px;
+			padding:6px 12px;
+			font-weight:bold;
+			color:#701112;
+				}
+			
+		div#invisible {
+			text-align:center;
+			color:#FFF8DC;
+				}
+				
+		.title {
+			font-family:arial;
+			font-weight:bold;
+			color:#701112;
+				}
+				
+		</style>
+	</head>
+	
+	<body>
+	
+	<div id = "wholemenu">
+		<div class = "top">
+		<h1>
+			The Duke and Dutchess cordially invite you to.....
+			<h2>
+				a party in honor of being rich, famous and being the better than everyone in the whole world.
+				We have sent you an invatation with a meal card included. Please feel free to choose 
+				your perferred dish and click the submit button.
+			</h2>
+			<h3>Thank You!</h3>
+		</h1>
+		</div>
+		<div class = "menu">
+			<h3 class ="title">Meal Card</h3>
+			
+			<span>
+				Here we have selections of Soups, Appetizers, Entrees and dessert. We have personally picked
+				out these dishes, so you know they are the tastiest and riches dishes around. 
+			</span>
+			
+			<hr/>
+			
+			<div class = "selections">
+				<span class = "title">Soups</span>
+				</br>
+				Caviar Soup<button id ="soup1" onclick ="checks1(); ">X</button>
+				</br>
+				AnQi Pho<button id ="soup2" onclick ="checks2()">X</button>
+				</br>
+				Buddha Jumps Over the Wall<button id ="soup3" onclick ="checks3()">X</button>
+				</br>
+				Loaded Potato Soup<button id ="soup4" onclick ="checks4()">X</button>
+				</br>
+				
+				<button id ="reset1" onclick = "reset1()">Reset Choice</button>
+				</br>
+			</div>
+			
+			<hr>
+			
+			<div class = "selections">
+				<span class = "title">Appetizers</span>
+				</br>
+				Stuffed Golden Mushrooms with Pecans<button id ="appetizer1" onclick ="checka1()">X</button>
+				</br>
+				Tiny Diamond Encrusted Tomato Tarts<button id ="appetizer2" onclick ="checka2()">X</button>
+				</br>
+				Marinated Mozzarella With Rubies<button id ="appetizer3" onclick ="checka3()">X</button>
+				</br>
+				Green Goddess Dipping Sauce With Albino Shrimp<button id ="appetizer4" onclick ="checka4()">X</button>
+				</br>
+				
+				<button id ="reset2" onclick = "reset2()">Reset Choice</button>
+				</br>
+			</div>
+			
+			<hr/>
+			<div class = "selections">
+			
+				<span class = "title">Entrees</span>
+				</br>
+				Spicy Honey-Brushed Endangered Chicken Thighs<button id ="entree1" onclick ="checke1()">X</button>
+				</br>
+				Spaghetti With Emerald Meatballs<button id ="entree2" onclick ="checke2()">X</button>
+				</br>
+				Miso-Glazed Salmon<button id ="entree3" onclick ="checke3()">X</button>
+				</br>
+				Shrimp and Broccoli Stir-Fry With Gold and Diamond Shavings<button id ="entree4" onclick ="checke4()">X</button>
+				</br>
+				
+				<button id ="reset3" onclick = "reset3()">Reset Choice</button>
+				</br>
+			</div>
+			
+			<hr/>
+			
+			<div class = "selections">
+				<span class = "title">Desserts</span>
+				</br>
+				Krispy Kreme's Luxe Doughnut<button id ="dessert1" onclick ="checkd1()">X</button>
+				</br>
+				Golden Opulence Sundae<button id ="dessert2" onclick ="checkd2()">X</button>
+				</br>
+				Strawberries Arnaud<button id ="dessert3" onclick ="checkd3()">X</button>
+				</br>
+				The Golden Phoenix Cupcake<button id ="dessert4" onclick ="checkd4()">X</button>
+				</br>
+				
+				<button id= "reset4" onclick = "reset4()">Reset Choice</button>
+				</br>
+			</div>
+			
+			<hr/>
+			
+			<button id = "resetall" onclick = "reset1(); reset2(); reset3(); reset4();">RESET ALL CHOICES</button>
+			
+			<hr/>
+			
+			<button onclick = "submit()">SUBMIT</button>
+			
+			<hr/>
+			
+		</div>
+	</div>	
+	
+	
+	
+	<div id ="invisible">
+		<h1>Thank You for your selections....</h1>
+		<h4>We hope to see you at the party with the finest of clothing. If you wish to bring your 
+		own rich dish, you are more then welcomed to.</h4> 
+		<h2>Your Selections</h2>
+		<h3 id ="soupchoice"></h3>
+		<h3 id = "appetizerchoice"></h3>
+		<h3 id = "entreechoice"></h3>
+		<h3 id = "dessertchoice"></h3>
+		
+		
+	</div>
+
+	<script type = "text/javascript">
+	document.getElementById("invisible").style.display = "none" ;
+	document.getElementById("wholemenu").style.display = "inline";
+	displaychoice();
+	
+	</script>
+		
+	</body>
+</html>
